@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Doğum Günün Kutlu Olsun</title>
+    <link rel="stylesheet" href="dogumgunustyle.css">
+    <script src="dogumgunu.js" defer></script>
+       <link rel="icon" href="dogumgunu.png" type="image/png">
+</head>
+<body>
+  <h1>Kendi Kişisel Doğum Günü Sitene Hoş Geldin <span class="emoji">🎂 🎉</span></h1>
+
+  <div class="container">
+    <p>Bu özel gününde sana en içten dileklerimi iletiyorum. Doğum günün kutlu olsun! Yeni yaşın sağlık, mutluluk ve başarılarla dolu olsun.</p>
+    <p>Umarım bu yeni yaşında hayallerine bir adım daha yaklaşırsın ve her anın keyfini çıkarırsın.</p>
+    <p>İyi ki doğdun!</p>
+
+    <form id="dogumForm">
+      <p>Adınızı girin:</p>
+      <input type="text" id="Adınız" placeholder="Adınızı giriniz" required>
+
+      <p>Soyadınızı girin:</p>
+      <input type="text" id="Soyisminiz" placeholder="Soyadınızı giriniz" required>
+
+      <p>E-posta Adresiniz:</p>
+      <input type="email" id="email" placeholder="mail@ornek.com" required>
+
+      <p>Doğum Yılınızı Giriniz:</p>
+      <input type="number" id="dogumtarihi" min="1900" max="2025" required>
+
+      <p>Havai Fişek Renklerini Seçin:</p>
+      <div id="customSelect" class="custom-select">
+        <div class="select-box">Renkleri seçin...</div>
+        <div class="options-container">
+          <div class="option" data-value="red">Kırmızı</div>
+          <div class="option" data-value="blue">Mavi</div>
+          <div class="option" data-value="green">Yeşil</div>
+          <div class="option" data-value="yellow">Sarı</div>
+          <div class="option" data-value="purple">Mor</div>
+        </div>
+      </div>
+      <input type="hidden" id="renkler" name="renkler">
+
+      <button id="kutlaBtn">Kutla 🎂</button>
+    </form>
+
+    <div id="isimSecimi" style="display:none;">
+      <p>Hangi isimle kutlayalım?</p>
+      <button class="secimBtn" data-tur="username">Kullanıcı Adı</button>
+      <button class="secimBtn" data-tur="fullname">Gerçek İsim</button>
+    </div>
+
+    <p id="mesaj" style="display:none;"></p>
+  </div>
+
+  <canvas id="havaiFisekCanvas" style="position:fixed; top:0; left:0; pointer-events:none; z-index:999;"></canvas>
+</body>
+</html>
